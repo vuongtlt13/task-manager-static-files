@@ -67,12 +67,3 @@ const triggerFirstSlotBeforeImage = (ele) => {
         $(ele).hide();
     }
 };
-
-$(document).ready(function () {
-    $('#workspace-tabs-{{array_keys($workspaceOptions)[0]}}-tab').trigger('click');
-    $('.btnAddNewTask').on('click', (evt) => {
-        resetForm(taskCreateForm);
-        $('#create_workspace_id').val(currentWorkspace()).trigger('change');
-        taskCreateModal.modal('show');
-    });
-});
